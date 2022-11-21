@@ -34,12 +34,11 @@ function App() {
   }
 
   const handleRemoveRepo = (id) => {
-    console.log('Removendo registro', id);
+    let removeArr = [...repos].filter(repo => repo.id !== id);
+    
+    setRepos(removeArr);
 
-    // utilizar filter.
   }
-
-
   return (
     <Container>
       <img src={gitLogo} width={72} height={72} alt="github logo"/>
